@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { Button } from './components/Button';
+import { Button } from './components/BlueprintCard';
 
 function App() {
   return (
