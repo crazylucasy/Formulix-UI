@@ -1,6 +1,15 @@
 import Ethmark from '../assets/ethmark.svg';
 
-export default function BlueprintCard(props: any) {
+export interface Props {
+  imageLink: string;
+  name: string;
+  blueprintid: number;
+  tsupply: number;
+  mintprice: number;
+  mintlimit: number;
+}
+
+export function BlueprintCard(props: Props) {
   return (
     <div
       id="container"

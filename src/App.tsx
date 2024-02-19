@@ -1,11 +1,28 @@
-import { Icon } from '@iconify/react/dist/iconify.js';
-import { Button } from './components/BlueprintCard';
+import { BlueprintCard } from './components/BlueprintCard';
+import { NormalBlueprintCard } from './components/BlueprintCard/normal';}
+import DogNFT from './assets/images/Imagedog.svg';
+import Robot from './assets/images/robot.svg';
 
 function App() {
   return (
-    <>
-      <h1 className="text-blue-900 text-4xl">Hello World!</h1>
-    </>
+    <div className="flex gap-2 items-center">
+      <BlueprintCard
+        imageLink={DogNFT}
+        name={'Color Dog'}
+        blueprintid={5}
+        tsupply={100000000}
+        mintprice={0.000153}
+        mintlimit={100}
+      />
+
+      <NormalBlueprintCard
+        imageLink={Robot}
+        name={'Color '}
+        blueprintid={5}
+        tsupply={100000000}
+        address={'0x55d398326f99059ff775485246999027b3197955'}
+      />
+    </div>
   );
 }
 

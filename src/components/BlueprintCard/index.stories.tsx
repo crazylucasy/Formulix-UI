@@ -1,21 +1,24 @@
 import { Meta, Story } from '@storybook/react';
 import { Icon } from '@iconify/react';
+import imagedog from '../../assets/images/Imagedog.svg';
 
-import { Button, Props } from './index';
+import { BlueprintCard, Props } from './index';
 
 const meta: Meta = {
-  title: 'Atoms/Button',
-  component: Button,
+  title: 'Atoms/BlueprintCard',
+  component: BlueprintCard,
 };
 
 export default meta;
 
-const Template: Story<Props> = (args) => <Button {...args} />;
+const Template: Story<Props> = (args) => <BlueprintCard {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  text: 'Recreate',
-  variant: 'primary',
-  icon: <Icon icon="gridicons:create" />,
-  className: 'text-xl',
+  imageLink: imagedog,
+  name: 'Color Dog',
+  blueprintid: 5,
+  tsupply: 10000000,
+  mintprice: 0.000153,
+  mintlimit: 100,
 };
