@@ -34,7 +34,12 @@ export function MyBlueprintCard(props: Props) {
         >
           <div id="name" className="text-white">
             <p className="text-xs font-mono text-[#858584]">Name</p>
-            <p className="text-lg font-mono">{props.name}</p>
+            <div className="flex justify-between py-[3px]">
+              <p className="text-lg font-mono">{props.name}</p>
+              <p className="flex font-mono items-center rounded-2xl bg-[#06DCEC]/20 text-[11px] my-[3px] px-[6px] border border-[#06DCEC]/50 text-[#06DCEC]/50 text-center">
+                My Blueprint
+              </p>
+            </div>
           </div>
 
           <div id="id_supply" className="flex justify-between text-white">
