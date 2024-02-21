@@ -1,19 +1,18 @@
-import EthLineSvg from '../../assets/images/CurrencyEth.png';
+import { Icon } from '@iconify/react/dist/iconify.js';
 
 export interface Props {
   imageLink: string;
   name: string;
   blueprintid: number;
   tsupply: number;
-  mintPrice: number;
-  mintLimit: number;
+  address: string;
 }
 
-export function DefaultBlueprintCard(props: Props) {
+export function OwnBlueprintCard(props: Props) {
   return (
     <div
       id="container"
-      className="w-[176px] sm:w-[280px]  border border-black bg-[#000000] rounded-3xl border-block"
+      className="w-[176px] sm:w-[280px]  border border-black bg-[#011018] rounded-3xl border-block"
       style={{ overflow: 'hidden' }}
     >
       <div className="relative w-[176px] sm:w-[280px]">
@@ -30,11 +29,11 @@ export function DefaultBlueprintCard(props: Props) {
         />
         <div
           id="gradient"
-          className="absolute top-[258px] bg-gradient-to-t from-[#000000] bg-opacity-100 to-[#000407]/0 w-[280px]  xs:w-[176px] h-[82px]"
+          className="absolute top-[258px] bg-gradient-to-t from-[#011018] bg-opacity-100 to-[#000407]/0 w-[280px]  xs:w-[176px] h-[82px]"
         ></div>
         <div
           id="infor"
-          className="relative flex justify-between sm:flex-col gap-y-1 top-[-8px] px-6 sm:w-[280px] w-[176px] box-border"
+          className="relative flex flex-wrap justify-between sm:flex-col gap-y-1 top-[-8px] px-6 sm:w-[280px] w-[176px] box-border"
         >
           <div id="name" className="text-white">
             <p className="text-xs font-mono text-[#858584]">Name</p>
@@ -52,19 +51,24 @@ export function DefaultBlueprintCard(props: Props) {
             </div>
           </div>
 
-          <div id="id_supply" className="flex justify-between text-white">
-            <div id="id" className=" hidden sm:block">
-              <p className="text-xs font-mono text-[#858584]">Mint Price</p>
-              <p className="flex gap-2 text-lg font-mono">
-                <span className="items-center my-auto">
-                  <img src={EthLineSvg} />
-                </span>{' '}
-                {props.mintPrice} <span className="text-[#F3AC19]">ETH</span>
-              </p>
-            </div>
-            <div id="id" className="text-end mb-4  hidden sm:block">
-              <p className="text-xs font-mono text-[#858584]">Mint Limit</p>
-              <p className="text-lg font-mono">{props.mintLimit}</p>
+          <div id="id_supply" className="w-full hidden sm:block">
+            <div id="address" className="text-white">
+              <p className="text-xs font-mono text-[#858584]">Address</p>
+              <div id="id_supply" className="flex justify-between text-white">
+                <div className="flex justify-center gap-1 item-center sm:text-lg font-mono text-xs">
+                  <Icon
+                    icon="logos:ethereum"
+                    className="hidden sm:block item-center my-auto"
+                  />
+                  {props.address.substring(0, 7)} ... {props.address.slice(-5)}
+                </div>
+                <button>
+                  <Icon
+                    icon="solar:copy-outline"
+                    className="item-center my-auto"
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>
