@@ -1,4 +1,3 @@
-import { Icon } from '@iconify/react/dist/iconify.js';
 import Button from '../Button';
 
 export default function AdvancedFilter() {

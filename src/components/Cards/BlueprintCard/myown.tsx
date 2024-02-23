@@ -42,7 +42,7 @@ export function MyOwnBlueprintCard(props: Props) {
             <p className="text-xs font-mono text-[#858584]">Name</p>
             <div className="flex justify-between py-[3px]">
               <p className="text-lg font-mono">{props.name}</p>
-              <p className="hidden sm:block flex font-mono items-center rounded-2xl bg-[#06DCEC]/20 text-[11px] my-[3px] px-[6px] border border-[#06DCEC]/50 text-[#06DCEC]/50 text-center">
+              <p className="hidden sm:block font-mono items-center rounded-2xl bg-[#06DCEC]/20 text-[11px] my-[3px] px-[6px] border border-[#06DCEC]/50 text-[#06DCEC]/50 text-center">
                 My Blueprint
               </p>
             </div>
