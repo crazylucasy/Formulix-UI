@@ -6,21 +6,18 @@ export interface Props {
   name: string;
   address: string;
   id: number;
-  balance: number;
 }
 
-export default function ProductListCard(props: Props) {
+export default function ERC721MintListCard(props: Props) {
   return (
-    <div
-      className={`flex gap-0 md:gap-3 w-[350px] md:w-[85%] h-[80px] justify-between items-center md:px-[40px] py-2 border bg-[#6469875]/10 rounded-3xl text-white text-base`}
-    >
+    <div className="flex gap-0 md:gap-3  w-[300px] sm:w-[400px] md:w-[85%] h-[80px] justify-between items-center md:px-[40px] py-2 border bg-[#099EF5]/10 border-[#099EF5] rounded-3xl text-white text-base">
       <div id="icon" className="flex justify-center w-[64px] py-2">
         <img src={props.uri} className="block h-[64px] rounded-full" />
       </div>
 
       <div
         id="type"
-        className="hidden md:flex text-white justify-center items-center w-[15%]"
+        className="hidden md:flex text-white justify-center items-center w-[15%]  text-2xl"
       >
         {props.type}
       </div>
@@ -44,13 +41,16 @@ export default function ProductListCard(props: Props) {
       </div>
 
       <div id="id" className="flex flex-col justify-center w-[5%]">
-        <p className="text-[#858584] text-xs">Id</p>
+        <p className="text-[#858584] text-xs">ID</p>
         <p>{props.id}</p>
       </div>
 
-      <div id="amount" className="w-[15%]">
-        <p className="text-[#858584] text-xs">Balance</p>
-        <p>{props.balance}</p>
+      <div id="amount" className="w-[15%]"></div>
+
+      <div id="approve" className="md:w-[15%]">
+        <button className="bg-[#000000] rounded-2xl text-xl px-[11.5px] py-[4px] border border-[#2E2E2E]">
+          Approve
+        </button>
       </div>
     </div>
   );

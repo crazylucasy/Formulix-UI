@@ -6,33 +6,31 @@ export interface Props {
   name: string;
   address: string;
   id: number;
-  balance: number;
+  amount: number;
 }
 
-export default function ProductListCard(props: Props) {
+export default function ERC1155DecomposeListCard(props: Props) {
   return (
-    <div
-      className={`flex gap-0 md:gap-3 w-[350px] md:w-[85%] h-[80px] justify-between items-center md:px-[40px] py-2 border bg-[#6469875]/10 rounded-3xl text-white text-base`}
-    >
+    <div className="flex gap-3 w-[350px] sm:w-[400px] md:w-[80%] h-[80px] justify-between items-center md:px-[40px] py-2 border bg-[#7414D5]/10 border-[#7414D5] rounded-3xl text-white text-base">
       <div id="icon" className="flex justify-center w-[64px] py-2">
-        <img src={props.uri} className="block h-[64px] rounded-full" />
+        <img src={props.uri} className=" h-[68px] rounded-full" />
       </div>
 
       <div
         id="type"
-        className="hidden md:flex text-white justify-center items-center w-[15%]"
+        className="hidden md:flex text-white justify-center items-center w-[15%]  text-2xl"
       >
         {props.type}
       </div>
 
-      <div id="name" className="flex flex-col justify-center w-[15%]">
+      <div id="name" className="flex flex-col justify-center w-[20%]">
         <p className="text-[#858584] text-xs">Name</p>
         <p>{props.name}</p>
       </div>
 
       <div
         id="address"
-        className="hidden md:block flex-col justify-center w-[25%]"
+        className="hidden md:block flex-col justify-center w-[30%]"
       >
         <p className="text-[#858584] text-xs">Address</p>
         <div className="flex gap-2">
@@ -43,14 +41,14 @@ export default function ProductListCard(props: Props) {
         </div>
       </div>
 
-      <div id="id" className="flex flex-col justify-center w-[5%]">
-        <p className="text-[#858584] text-xs">Id</p>
+      <div id="id" className="w-[5%] justify-center">
+        <p className="text-[#858584] text-xs">ID</p>
         <p>{props.id}</p>
       </div>
 
-      <div id="amount" className="w-[15%]">
-        <p className="text-[#858584] text-xs">Balance</p>
-        <p>{props.balance}</p>
+      <div id="amount" className="w-[20%]">
+        <p className="text-[#858584] text-xs">Amount</p>
+        <p>{props.amount}</p>
       </div>
     </div>
   );
