@@ -1,9 +1,7 @@
+import CoreRoutes from './routes';
+
 function App() {
-  return (
-    <>
-      <h1 className="text-blue-900 text-4xl">Hello World!</h1>
-    </>
-  );
+  return <CoreRoutes />;
 }
 
 export default App;
